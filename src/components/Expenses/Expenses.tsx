@@ -1,6 +1,5 @@
-import React from 'react';
-import Card from '../Card/Card';
-import ExpenseItem from '../ExpenseItem/ExpenseItem';
+import Card from '../UI/Card/Card';
+import ExpenseItem from './ExpenseItem/ExpenseItem';
 
 import classes from './Expenses.module.scss';
 
