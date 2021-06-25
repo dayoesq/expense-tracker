@@ -1,9 +1,8 @@
 interface IExpense {
-  id?: number;
-  date?: Date;
-  decription?: string;
+  id?: string;
   title?: string;
   amount?: number;
+  date?: Date;
 }
 
 type Expenses = {
