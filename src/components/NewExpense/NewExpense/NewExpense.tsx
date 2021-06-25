@@ -1,10 +1,23 @@
-import ExpenseForm from '../ExpenseForm/ExpenseForm';
+import ExpenseForm, { FormInputs } from '../ExpenseForm/ExpenseForm';
 import classes from './NewExpense.module.scss';
 
-const NewExpense: React.FC = () => {
+type NewExpenseProps = {
+  onAddExpense: (data: FormInputs) => {};
+}
+
+const NewExpense: React.FC<NewExpenseProps> = props => {
+  const newExpenseHandler = (enteredExpense: FormInputs) => {
+    const expenseData = {
+      ...enteredExpense,
+      id: Math.random().toString()
+    }
+    // console.log(expenseData);
+    props.onAddExpense(expenseData);
+    return expenseData;
+  };
   return (
     <div className={classes.newExpense}>
-      <ExpenseForm />
+      <ExpenseForm onSaveNewExpense={newExpenseHandler}/>
     </div>
   );
 };
