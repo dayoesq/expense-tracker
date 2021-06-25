@@ -1,12 +1,10 @@
-import React from 'react';
-import Card from '../Card/Card';
+import Card from '../../UI/Card/Card';
 import ExpenseDate from '../ExpenseDate/ExpenseDate';
 
 import classes from './ExpenseItem.module.scss';
 
 
 const ExpenseItem: React.FC<IExpense> = props => {
-
   return (
     <Card className={classes.expenseItem}>
       <ExpenseDate date={props.date}/>
