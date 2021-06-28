@@ -3,6 +3,7 @@ import classes from './ExpenseForm.module.scss';
 
 type ExpenseProps = {
   onSaveNewExpense: (data: IExpense) => void;
+  onCancel: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const ExpenseForm: React.FC<ExpenseProps> = props => {
@@ -52,6 +53,7 @@ const ExpenseForm: React.FC<ExpenseProps> = props => {
         </div>
       </div>
       <div className={classes.newExpense__actions}>
+        <button type="submit" onClick={props.onCancel}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
