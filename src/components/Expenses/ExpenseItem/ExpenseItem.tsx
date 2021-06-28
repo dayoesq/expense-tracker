@@ -8,7 +8,7 @@ const ExpenseItem: React.FC<IExpense> = props => {
   return (
     <Card className={classes.expenseItem}>
       <ExpenseDate date={props.date}/>
-      <div className={classes.description}>
+      <div className={classes.title}>
         <h2>{props.title}</h2>
         <div className={classes.price}>{`$${props.amount}`}</div>
       </div>

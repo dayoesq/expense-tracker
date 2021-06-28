@@ -1,13 +1,14 @@
 import classes from './ExpenseDate.module.scss';
 
 type ExpenseDateProps = {
-  date?: Date;
+  date?: IExpense['date'];
 };
 
 const ExpenseDate: React.FC<ExpenseDateProps> = props => {
-  const day = props.date ? props.date.toLocaleString('en-US', { day: '2-digit' }) : '';
+  const day = props.date ? props.date.toLocaleString('en-FI', { day: '2-digit' }) : '';
   const month = props.date ? props.date.toLocaleString('en-FI', { month: 'long' }) : '';
   const year = props.date ? props.date.getFullYear() : '';
+
   if (props.date) {
     return (
       <div className={classes.expenseDate}>
