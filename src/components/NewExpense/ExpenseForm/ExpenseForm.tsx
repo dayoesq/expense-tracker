@@ -31,7 +31,7 @@ const ExpenseForm: React.FC<ExpenseProps> = props => {
     setFormState((prevState) => {
       return {
         ...prevState,
-        [name]: (name === 'date') ? new Date(value) : value  
+        [name]: (name === 'date') ? new Date(value) : ((name === 'amount') ? parseFloat(value) : value)  
       }
     });
   };
